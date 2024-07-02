@@ -1,0 +1,117 @@
+*{
+    font-family: monospace;
+    font-size: 15px;
+}
+header{
+    background-color: rgb(86, 139, 244);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+    
+}
+
+
+body{
+    margin: 0;
+}
+.button{
+    
+    height: 30px;
+  width: 130px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  margin: 10px;
+  
+}
+.button:hover{
+    background-color:rgb(32, 35, 244);
+    color: white;
+}
+h1{
+    color: rgb(86, 139, 244);
+    font-size: 3rem;
+}
+header h1{
+    color: white;
+    text-align: center;
+}
+main{
+    padding: 20px;
+}
+section div p{
+
+    text-align: left;
+}
+img{
+    
+        height: 200px;
+        width: 150px;
+}
+section{
+    height: 100vh;
+    border: 2px solid lightgrey;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+input{
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+}
+form div{
+    
+    margin: 5px 0 ;
+}
+
+.submit{
+    height: 30px;
+    width: 130px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    background-color:rgb(67, 97, 244) ;
+}
+.submit:hover{
+    color: white;
+    background-color: green;
+}
+ol li{
+    font-size: 20px;
+}
+.fixedbutton{
+   
+    height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color:rgb(86, 139, 244) ;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+footer{
+    background-color: black;
+    height: 100px;
+    color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+form div{
+    display:flex;
+}
