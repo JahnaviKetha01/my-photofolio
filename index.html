@@ -11,7 +11,7 @@
 
     <h1>Welcome to My Portfolio</h1>
     <div>
-    <a href="#about me"> <button class="button">about me</button></a>
+    <a href="#about-me"> <button class="button">about me</button></a>
     <a href="#skills"><button class="button">Skills</button></a>
     <a href="#projects"><button class="button">Projects</button></a>
     <a href="#contact me"><button class="button">Contact Me</button></a>
@@ -20,7 +20,7 @@
     </header>
     <main>
 
-        <section id="about me">
+        <section id="about-me">
             <h1>Jahnavi MITS</h1>
     <img src="myimage.jpg"  width= "350" height="450"alt="This is my image">
     <div>
@@ -89,7 +89,8 @@
         </div><br>
         <div>
         <label for="">Bio(up to 200 characters)</label>
-        <input type="textarea">
+        <textarea id="bio" maxlength="200" placeholder="Write about yourself (max 200 chars)"></textarea>
+
     </div><br>
     <div>
         <button type="submit" class="submit">submit</button>
@@ -110,7 +111,49 @@
     </footer>
     
     
+<script>
+// Smooth scroll to sections
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetID = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetID);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
 
+// Scroll to top button
+const topButton = document.querySelector('.fixedbutton');
+topButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-   </body>
+// Form validation and alert on submit
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent actual form submission
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    if (!name || !email) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    alert("Thank you, " + name + "! Your message has been submitted.");
+    this.reset(); // reset form fields
+});
+
+// Limit characters in Bio input
+const bioInput = document.querySelector('input[type="textarea"]');
+bioInput.setAttribute('maxlength', '200');
+bioInput.addEventListener('input', () => {
+    const remaining = 200 - bioInput.value.length;
+    bioInput.title = `${remaining} characters remaining`;
+});
+</script>
+
+</body>
 </html>
